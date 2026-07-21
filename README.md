@@ -25,6 +25,16 @@ cp .env.example .env.local
 
 設定後は `npm run dev` を再起動すれば自動的に実データ検索に切り替わります（`lib/hotels/index.js` がキーの有無でプロバイダを自動選択）。
 
+### 料金データのキャッシュ(Supabase)
+
+楽天トラベルAPIは1泊ごとに呼び出す仕様のため、期間を長く指定するほど呼び出し回数が増えます。Supabaseの`SUPABASE_URL`と`SUPABASE_SERVICE_ROLE_KEY`を設定すると、`地域×宿泊日`単位で結果をキャッシュし(有効期限6時間)、同じ条件の再検索時はAPIを呼ばずキャッシュから返すようになります。
+
+1. [Supabase](https://supabase.com/)でプロジェクトを作成(またはVercel MarketplaceからSupabase統合を追加)
+2. SQL Editorで [`supabase/schema.sql`](supabase/schema.sql) を実行してテーブルを作成
+3. `.env.local` に `SUPABASE_URL` / `SUPABASE_SERVICE_ROLE_KEY` を設定(Project Settings > API から取得)
+
+未設定の場合はキャッシュを使わず、常に楽天APIを直接呼び出します(動作に支障はありません)。
+
 ### 一休・Google Hotelsについて
 
 - 一休.comは一般開発者向けの公開APIを提供していないため未対応です。
@@ -47,7 +57,10 @@ app/
 lib/hotels/
   regions.js                  都道府県一覧(楽天middleClassCode準拠)
   dateUtils.js                日付ユーティリティ
+  cache.js                    Supabaseキャッシュ読み書き
   providers/mockProvider.js   モックデータ生成
   providers/rakutenProvider.js 楽天トラベルAPI連携
   index.js                    プロバイダ自動選択
+lib/supabase/client.js        Supabaseクライアント初期化
+supabase/schema.sql           キャッシュ用テーブルのDDL
 ```
