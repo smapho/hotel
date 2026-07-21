@@ -18,6 +18,7 @@ export default function Home() {
   const [form, setForm] = useState({
     regionCode: "tokyo",
     cityCode: "",
+    detailCode: "",
     checkinDate: today(),
     checkoutDate: plusDays(today(), 1),
     adultNum: 1,
@@ -38,6 +39,7 @@ export default function Home() {
         roomNum: "1",
       });
       if (form.cityCode) params.set("city", form.cityCode);
+      if (form.detailCode) params.set("detail", form.detailCode);
       const res = await fetch(`/api/hotels/search?${params.toString()}`);
       const data = await res.json();
       if (!res.ok) {

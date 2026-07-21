@@ -1,7 +1,7 @@
 "use client";
 
 import { REGIONS } from "@/lib/hotels/regions";
-import { getCitiesForRegion } from "@/lib/hotels/cities";
+import { getCitiesForRegion, getDetailAreasForCity } from "@/lib/hotels/cities";
 
 function today() {
   const d = new Date();
@@ -16,6 +16,7 @@ function plusDays(dateStr, days) {
 
 export default function SearchForm({ value, onChange, onSubmit, isLoading }) {
   const cities = getCitiesForRegion(value.regionCode);
+  const detailAreas = getDetailAreasForCity(value.regionCode, value.cityCode);
 
   const handleChange = (field) => (e) => {
     const next = { ...value, [field]: e.target.value };
@@ -23,8 +24,12 @@ export default function SearchForm({ value, onChange, onSubmit, isLoading }) {
       next.checkoutDate = plusDays(e.target.value, 1);
     }
     if (field === "regionCode") {
-      // 都道府県を変えたら市区町村選択はリセットする(前の都道府県のコードのまま残らないように)
+      // 都道府県を変えたら市区町村・詳細エリア選択はリセットする(前の都道府県のコードのまま残らないように)
       next.cityCode = "";
+      next.detailCode = "";
+    }
+    if (field === "cityCode") {
+      next.detailCode = "";
     }
     onChange(next);
   };
@@ -67,6 +72,24 @@ export default function SearchForm({ value, onChange, onSubmit, isLoading }) {
           ))}
         </select>
       </div>
+
+      {detailAreas.length > 0 && (
+        <div className="flex flex-col gap-1">
+          <label className="text-sm font-medium">詳細エリア</label>
+          <select
+            className="rounded-md border border-black/15 bg-transparent px-3 py-2 dark:border-white/20"
+            value={value.detailCode}
+            onChange={handleChange("detailCode")}
+          >
+            <option value="">指定なし</option>
+            {detailAreas.map((d) => (
+              <option key={d.code} value={d.code}>
+                {d.name}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
 
       <div className="flex flex-col gap-1">
         <label className="text-sm font-medium">チェックイン</label>

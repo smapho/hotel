@@ -4,8 +4,8 @@ const formatter = new Intl.NumberFormat("ja-JP");
 
 export default function HotelResults({ result }) {
   if (!result) return null;
-  const { hotels, nights, regionName, cityName, provider } = result;
-  const areaLabel = cityName ? `${regionName} ${cityName}` : regionName;
+  const { hotels, nights, regionName, cityName, detailAreaName, provider } = result;
+  const areaLabel = [regionName, cityName, detailAreaName].filter(Boolean).join(" ");
 
   if (hotels.length === 0) {
     return <p className="mt-8 text-black/60 dark:text-white/60">この条件に一致する空室が見つかりませんでした。</p>;

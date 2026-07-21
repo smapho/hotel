@@ -16,10 +16,17 @@ const cities = {};
 
 for (const { middleClass } of middleClasses) {
   regions.push({ code: middleClass.middleClassCode, name: middleClass.middleClassName });
-  cities[middleClass.middleClassCode] = (middleClass.smallClasses ?? []).map(({ smallClass }) => ({
-    code: smallClass.smallClassCode,
-    name: smallClass.smallClassName,
-  }));
+  cities[middleClass.middleClassCode] = (middleClass.smallClasses ?? []).map(({ smallClass }) => {
+    const details = (smallClass.detailClasses ?? []).map(({ detailClass }) => ({
+      code: detailClass.detailClassCode,
+      name: detailClass.detailClassName,
+    }));
+    return {
+      code: smallClass.smallClassCode,
+      name: smallClass.smallClassName,
+      ...(details.length > 0 ? { details } : {}),
+    };
+  });
 }
 
 const regionsJs = `// 楽天トラベル地区コードAPI(GetAreaClass)から生成。scripts/generateAreaData.mjs で再生成できる。
@@ -33,5 +40,8 @@ export function getRegionName(code) {
 writeFileSync(path.join(projectRoot, "lib/hotels/regions.js"), regionsJs);
 writeFileSync(path.join(projectRoot, "lib/hotels/cities.generated.json"), JSON.stringify(cities, null, 2));
 
+const detailCount = Object.values(cities)
+  .flat()
+  .reduce((a, c) => a + (c.details?.length ?? 0), 0);
 console.log(`regions.js: ${regions.length}都道府県`);
-console.log(`cities.generated.json: ${Object.values(cities).reduce((a, c) => a + c.length, 0)}市区町村`);
+console.log(`cities.generated.json: ${Object.values(cities).reduce((a, c) => a + c.length, 0)}市区町村, ${detailCount}詳細エリア`);
