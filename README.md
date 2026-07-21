@@ -13,17 +13,19 @@ npm run dev
 
 ## データソース
 
-- **楽天トラベル空室検索API**（`RAKUTEN_APP_ID` を設定した場合に使用）
-- **モックデータ**（APIキー未設定時のデフォルト）
+- **楽天トラベル空室検索API**（`RAKUTEN_APP_ID` と `RAKUTEN_ACCESS_KEY` を設定した場合に使用）
+- **モックデータ**（未設定時のデフォルト）
 
-`.env.example` を `.env.local` にコピーし、[楽天ウェブサービス](https://webservice.rakuten.co.jp/)で取得したアプリIDを設定すると実データに切り替わります。
+`.env.example` を `.env.local` にコピーし、[楽天ウェブサービス](https://webservice.rakuten.co.jp/)で取得したアプリID・アクセスキーを設定すると実データに切り替わります。
 
 ```bash
 cp .env.example .env.local
-# .env.local を編集して RAKUTEN_APP_ID を設定
+# .env.local を編集して RAKUTEN_APP_ID / RAKUTEN_ACCESS_KEY を設定
 ```
 
 設定後は `npm run dev` を再起動すれば自動的に実データ検索に切り替わります（`lib/hotels/index.js` がキーの有無でプロバイダを自動選択）。
+
+> **2026年5月の楽天API仕様変更について**: エンドポイントが `openapi.rakuten.co.jp` に変わり、`accessKey` が必須化、Referer/Originヘッダーの送信も必要になりました。アプリ登録時の「許可されたWebサイト」には、本番ドメインに加えてVercelのプレビューデプロイ用ワイルドカード(例: `hotel-*-smapho.vercel.app`)とローカル開発用の`localhost:3000`を登録してください。
 
 ### 料金データのキャッシュ(Supabase)
 
