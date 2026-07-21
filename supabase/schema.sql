@@ -16,8 +16,14 @@ create table if not exists hotel_rate_cache (
   plan_id text,
   room_class text,
   room_name text not null,
-  plan_name text not null,
+  -- plan_nameはnullのプランも実際にあるためnot nullにしない。
+  plan_name text,
   reserve_url text,
+  with_breakfast boolean,
+  with_dinner boolean,
+  payment text,
+  point_rate numeric,
+  plan_contents text,
   -- plan_idがあればそれ、無ければroomClass__planNameをアプリ側(cache.js)で計算して入れる識別キー。
   -- PostgRESTのupsert(on_conflict)は実カラムしか指定できないため、式ではなく列として持たせている。
   room_key text not null,
