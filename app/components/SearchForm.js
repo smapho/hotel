@@ -2,6 +2,7 @@
 
 import { REGIONS } from "@/lib/hotels/regions";
 import { getCitiesForRegion, getDetailAreasForCity } from "@/lib/hotels/cities";
+import { PRICE_BRACKETS } from "@/lib/hotels/priceBrackets";
 
 function today() {
   const d = new Date();
@@ -14,7 +15,7 @@ function plusDays(dateStr, days) {
   return d.toISOString().slice(0, 10);
 }
 
-export default function SearchForm({ value, onChange, onSubmit, isLoading }) {
+export default function SearchForm({ value, onChange, onSubmit, isLoading, priceBrackets, onTogglePriceBracket, onClearPriceBrackets }) {
   const cities = getCitiesForRegion(value.regionCode);
   const detailAreas = getDetailAreasForCity(value.regionCode, value.cityCode);
 
@@ -133,6 +134,33 @@ export default function SearchForm({ value, onChange, onSubmit, isLoading }) {
         >
           {isLoading ? "検索中..." : "料金を検索"}
         </button>
+      </div>
+
+      <div className="col-span-full flex flex-wrap items-center gap-2 border-t border-black/5 pt-4 dark:border-white/10">
+        <span className="text-sm font-medium text-black/70 dark:text-white/70">価格帯で絞り込み:</span>
+        {PRICE_BRACKETS.map((b) => (
+          <button
+            key={b.id}
+            type="button"
+            onClick={() => onTogglePriceBracket(b.id)}
+            className={`rounded-full border px-3 py-1 text-xs font-medium transition ${
+              priceBrackets.has(b.id)
+                ? "border-blue-600 bg-blue-600 text-white"
+                : "border-black/15 bg-transparent text-black/70 hover:border-black/30 dark:border-white/20 dark:text-white/70"
+            }`}
+          >
+            {b.label}
+          </button>
+        ))}
+        {priceBrackets.size > 0 && (
+          <button
+            type="button"
+            onClick={onClearPriceBrackets}
+            className="text-xs text-black/50 underline hover:text-black/70 dark:text-white/50 dark:hover:text-white/70"
+          >
+            クリア
+          </button>
+        )}
       </div>
     </form>
   );

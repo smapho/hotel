@@ -26,6 +26,16 @@ export default function Home() {
   const [result, setResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [priceBrackets, setPriceBrackets] = useState(new Set());
+
+  const togglePriceBracket = (id) => {
+    setPriceBrackets((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
 
   const handleSearch = async () => {
     setIsLoading(true);
@@ -63,7 +73,15 @@ export default function Home() {
         </p>
 
         <div className="mt-6">
-          <SearchForm value={form} onChange={setForm} onSubmit={handleSearch} isLoading={isLoading} />
+          <SearchForm
+            value={form}
+            onChange={setForm}
+            onSubmit={handleSearch}
+            isLoading={isLoading}
+            priceBrackets={priceBrackets}
+            onTogglePriceBracket={togglePriceBracket}
+            onClearPriceBrackets={() => setPriceBrackets(new Set())}
+          />
         </div>
 
         {error && (
@@ -72,7 +90,7 @@ export default function Home() {
           </p>
         )}
 
-        <HotelResults result={result} />
+        <HotelResults result={result} priceBrackets={priceBrackets} />
       </main>
     </div>
   );
