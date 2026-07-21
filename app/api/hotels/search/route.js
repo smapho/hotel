@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { searchHotels } from "@/lib/hotels";
+import { getCitiesForRegion } from "@/lib/hotels/cities";
 
 function isValidDate(str) {
   return /^\d{4}-\d{2}-\d{2}$/.test(str) && !Number.isNaN(new Date(`${str}T00:00:00`).getTime());
@@ -8,6 +9,7 @@ function isValidDate(str) {
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const regionCode = searchParams.get("region");
+  const cityCode = searchParams.get("city") || null;
   const checkinDate = searchParams.get("checkinDate");
   const checkoutDate = searchParams.get("checkoutDate");
   const adultNum = Number(searchParams.get("adultNum") ?? "1");
@@ -15,6 +17,9 @@ export async function GET(request) {
 
   if (!regionCode) {
     return NextResponse.json({ error: "region は必須です" }, { status: 400 });
+  }
+  if (cityCode && !getCitiesForRegion(regionCode).some((c) => c.code === cityCode)) {
+    return NextResponse.json({ error: "city の値が region と一致していません" }, { status: 400 });
   }
   if (!isValidDate(checkinDate) || !isValidDate(checkoutDate)) {
     return NextResponse.json({ error: "checkinDate / checkoutDate は YYYY-MM-DD 形式で指定してください" }, { status: 400 });
@@ -35,7 +40,7 @@ export async function GET(request) {
   }
 
   try {
-    const result = await searchHotels({ regionCode, checkinDate, checkoutDate, adultNum, roomNum });
+    const result = await searchHotels({ regionCode, cityCode, checkinDate, checkoutDate, adultNum, roomNum });
     return NextResponse.json(result);
   } catch (err) {
     console.error(err);

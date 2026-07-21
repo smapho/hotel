@@ -17,6 +17,7 @@ function plusDays(dateStr, days) {
 export default function Home() {
   const [form, setForm] = useState({
     regionCode: "tokyo",
+    cityCode: "",
     checkinDate: today(),
     checkoutDate: plusDays(today(), 1),
     adultNum: 1,
@@ -36,6 +37,7 @@ export default function Home() {
         adultNum: String(form.adultNum),
         roomNum: "1",
       });
+      if (form.cityCode) params.set("city", form.cityCode);
       const res = await fetch(`/api/hotels/search?${params.toString()}`);
       const data = await res.json();
       if (!res.ok) {

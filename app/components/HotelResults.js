@@ -4,7 +4,8 @@ const formatter = new Intl.NumberFormat("ja-JP");
 
 export default function HotelResults({ result }) {
   if (!result) return null;
-  const { hotels, nights, regionName, provider } = result;
+  const { hotels, nights, regionName, cityName, provider } = result;
+  const areaLabel = cityName ? `${regionName} ${cityName}` : regionName;
 
   if (hotels.length === 0) {
     return <p className="mt-8 text-black/60 dark:text-white/60">この条件に一致する空室が見つかりませんでした。</p>;
@@ -14,7 +15,7 @@ export default function HotelResults({ result }) {
     <div className="mt-8 flex flex-col gap-6">
       <div className="flex items-center justify-between">
         <p className="text-sm text-black/60 dark:text-white/60">
-          {regionName} / {nights[0]} 〜 {nights[nights.length - 1]}（{nights.length}泊） の検索結果 {hotels.length}件
+          {areaLabel} / {nights[0]} 〜 {nights[nights.length - 1]}（{nights.length}泊） の検索結果 {hotels.length}件
         </p>
         {provider === "mock" && (
           <span className="rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-800 dark:bg-yellow-900/40 dark:text-yellow-300">

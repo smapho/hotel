@@ -1,6 +1,7 @@
 "use client";
 
 import { REGIONS } from "@/lib/hotels/regions";
+import { getCitiesForRegion } from "@/lib/hotels/cities";
 
 function today() {
   const d = new Date();
@@ -14,10 +15,16 @@ function plusDays(dateStr, days) {
 }
 
 export default function SearchForm({ value, onChange, onSubmit, isLoading }) {
+  const cities = getCitiesForRegion(value.regionCode);
+
   const handleChange = (field) => (e) => {
     const next = { ...value, [field]: e.target.value };
     if (field === "checkinDate" && next.checkoutDate <= e.target.value) {
       next.checkoutDate = plusDays(e.target.value, 1);
+    }
+    if (field === "regionCode") {
+      // 都道府県を変えたら市区町村選択はリセットする(前の都道府県のコードのまま残らないように)
+      next.cityCode = "";
     }
     onChange(next);
   };
@@ -28,7 +35,7 @@ export default function SearchForm({ value, onChange, onSubmit, isLoading }) {
         e.preventDefault();
         onSubmit();
       }}
-      className="grid grid-cols-1 gap-4 rounded-xl border border-black/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-black/20 sm:grid-cols-2 lg:grid-cols-5"
+      className="grid grid-cols-1 gap-4 rounded-xl border border-black/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-black/20 sm:grid-cols-2 lg:grid-cols-6"
     >
       <div className="flex flex-col gap-1">
         <label className="text-sm font-medium">地域</label>
@@ -40,6 +47,22 @@ export default function SearchForm({ value, onChange, onSubmit, isLoading }) {
           {REGIONS.map((r) => (
             <option key={r.code} value={r.code}>
               {r.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="flex flex-col gap-1">
+        <label className="text-sm font-medium">市区町村</label>
+        <select
+          className="rounded-md border border-black/15 bg-transparent px-3 py-2 dark:border-white/20"
+          value={value.cityCode}
+          onChange={handleChange("cityCode")}
+        >
+          <option value="">指定なし(代表都市周辺)</option>
+          {cities.map((c) => (
+            <option key={c.code} value={c.code}>
+              {c.name}
             </option>
           ))}
         </select>

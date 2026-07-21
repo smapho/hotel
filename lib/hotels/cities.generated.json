@@ -1,0 +1,1344 @@
+{
+  "hokkaido": [
+    {
+      "code": "sapporo",
+      "name": "札幌"
+    },
+    {
+      "code": "jozankei",
+      "name": "定山渓"
+    },
+    {
+      "code": "wakkanai",
+      "name": "稚内・留萌・利尻・礼文"
+    },
+    {
+      "code": "abashiri",
+      "name": "網走・紋別・北見・知床"
+    },
+    {
+      "code": "kushiro",
+      "name": "釧路・阿寒・川湯・根室"
+    },
+    {
+      "code": "obihiro",
+      "name": "帯広・十勝"
+    },
+    {
+      "code": "hidaka",
+      "name": "日高・えりも"
+    },
+    {
+      "code": "furano",
+      "name": "富良野・美瑛・トマム"
+    },
+    {
+      "code": "asahikawa",
+      "name": "旭川・層雲峡・旭岳"
+    },
+    {
+      "code": "chitose",
+      "name": "千歳・支笏・苫小牧・滝川・夕張・空知"
+    },
+    {
+      "code": "otaru",
+      "name": "小樽・キロロ・積丹・余市"
+    },
+    {
+      "code": "niseko",
+      "name": "ルスツ・ニセコ・倶知安"
+    },
+    {
+      "code": "hakodate",
+      "name": "函館・湯の川・大沼・奥尻"
+    },
+    {
+      "code": "noboribetsu",
+      "name": "洞爺・室蘭・登別"
+    }
+  ],
+  "aomori": [
+    {
+      "code": "aomori",
+      "name": "青森・浅虫温泉"
+    },
+    {
+      "code": "tsugaru",
+      "name": "津軽半島・五所川原"
+    },
+    {
+      "code": "ntsugaru",
+      "name": "白神山地・西津軽"
+    },
+    {
+      "code": "hirosaki",
+      "name": "弘前・黒石"
+    },
+    {
+      "code": "towadako",
+      "name": "八甲田・十和田湖・奥入瀬"
+    },
+    {
+      "code": "hachinohe",
+      "name": "八戸・三沢・七戸十和田"
+    },
+    {
+      "code": "shimokita",
+      "name": "下北・大間・むつ"
+    }
+  ],
+  "iwate": [
+    {
+      "code": "morioka",
+      "name": "盛岡"
+    },
+    {
+      "code": "shizukuishi",
+      "name": "雫石"
+    },
+    {
+      "code": "appi",
+      "name": "安比高原・八幡平・二戸"
+    },
+    {
+      "code": "kuji",
+      "name": "宮古・久慈・岩泉"
+    },
+    {
+      "code": "ofunato",
+      "name": "釜石・大船渡・陸前高田"
+    },
+    {
+      "code": "kitakami",
+      "name": "北上・花巻・遠野"
+    },
+    {
+      "code": "ichinoseki",
+      "name": "奥州・平泉・一関"
+    }
+  ],
+  "miyagi": [
+    {
+      "code": "sendai",
+      "name": "仙台・多賀城・名取"
+    },
+    {
+      "code": "akiu",
+      "name": "秋保・作並"
+    },
+    {
+      "code": "naruko",
+      "name": "鳴子・古川・くりこま高原"
+    },
+    {
+      "code": "matsushima",
+      "name": "松島・塩釜・石巻・南三陸・気仙沼"
+    },
+    {
+      "code": "shiroishi",
+      "name": "白石・宮城蔵王"
+    }
+  ],
+  "akita": [
+    {
+      "code": "akita",
+      "name": "秋田"
+    },
+    {
+      "code": "noshiro",
+      "name": "能代・男鹿・白神"
+    },
+    {
+      "code": "odate",
+      "name": "大館・鹿角・十和田大湯・八幡平"
+    },
+    {
+      "code": "tazawa",
+      "name": "角館・大曲・田沢湖"
+    },
+    {
+      "code": "yuzawa",
+      "name": "湯沢・横手"
+    },
+    {
+      "code": "honjo",
+      "name": "由利本荘・鳥海山"
+    }
+  ],
+  "yamagata": [
+    {
+      "code": "yamagata",
+      "name": "山形・蔵王・天童・上山"
+    },
+    {
+      "code": "yonezawa",
+      "name": "米沢・赤湯・高畠・長井"
+    },
+    {
+      "code": "sagae",
+      "name": "寒河江・月山"
+    },
+    {
+      "code": "mogami",
+      "name": "尾花沢・新庄・村山"
+    },
+    {
+      "code": "shonai",
+      "name": "酒田・鶴岡・湯野浜・温海"
+    }
+  ],
+  "hukushima": [
+    {
+      "code": "fukushima",
+      "name": "福島・二本松"
+    },
+    {
+      "code": "aizu",
+      "name": "会津若松・喜多方"
+    },
+    {
+      "code": "bandai",
+      "name": "猪苗代・表磐梯"
+    },
+    {
+      "code": "urabandai",
+      "name": "磐梯高原・裏磐梯"
+    },
+    {
+      "code": "koriyama",
+      "name": "郡山・磐梯熱海"
+    },
+    {
+      "code": "minami",
+      "name": "南会津・下郷・只見・檜枝岐"
+    },
+    {
+      "code": "nakadori",
+      "name": "白河・須賀川"
+    },
+    {
+      "code": "hamadori",
+      "name": "いわき・南相馬・相馬"
+    }
+  ],
+  "ibaragi": [
+    {
+      "code": "mito",
+      "name": "水戸・笠間"
+    },
+    {
+      "code": "oarai",
+      "name": "大洗・ひたちなか"
+    },
+    {
+      "code": "hitachi",
+      "name": "日立・北茨城・奥久慈"
+    },
+    {
+      "code": "tsukuba",
+      "name": "つくば・土浦・取手"
+    },
+    {
+      "code": "yuki",
+      "name": "古河・結城・筑西・常総"
+    },
+    {
+      "code": "kashima",
+      "name": "鹿嶋・神栖・潮来・北浦"
+    }
+  ],
+  "tochigi": [
+    {
+      "code": "utsunomiya",
+      "name": "宇都宮・さくら"
+    },
+    {
+      "code": "nikko",
+      "name": "日光・中禅寺湖・奥日光・今市"
+    },
+    {
+      "code": "kinugawa",
+      "name": "鬼怒川・川治・湯西川・川俣"
+    },
+    {
+      "code": "nasu",
+      "name": "那須・板室・黒磯"
+    },
+    {
+      "code": "shiobara",
+      "name": "塩原・矢板・大田原・西那須野"
+    },
+    {
+      "code": "mashiko",
+      "name": "真岡・益子・茂木"
+    },
+    {
+      "code": "koyama",
+      "name": "小山・足利・佐野・栃木"
+    }
+  ],
+  "gunma": [
+    {
+      "code": "maebashi",
+      "name": "前橋・赤城"
+    },
+    {
+      "code": "ikaho",
+      "name": "伊香保温泉・渋川"
+    },
+    {
+      "code": "manza",
+      "name": "万座･嬬恋･北軽井沢"
+    },
+    {
+      "code": "kusatsu",
+      "name": "草津温泉・白根"
+    },
+    {
+      "code": "shimaonsen",
+      "name": "四万温泉"
+    },
+    {
+      "code": "numata",
+      "name": "水上・猿ヶ京・沼田"
+    },
+    {
+      "code": "oze",
+      "name": "尾瀬・丸沼"
+    },
+    {
+      "code": "kiryu",
+      "name": "伊勢崎・太田・館林・桐生"
+    },
+    {
+      "code": "takasaki",
+      "name": "高崎"
+    },
+    {
+      "code": "fujioka",
+      "name": "富岡・藤岡・安中・磯部温泉"
+    }
+  ],
+  "saitama": [
+    {
+      "code": "saitama",
+      "name": "大宮・浦和・川口・上尾"
+    },
+    {
+      "code": "kasukabe",
+      "name": "草加・越谷・春日部・羽生"
+    },
+    {
+      "code": "kumagaya",
+      "name": "熊谷・深谷・本庄"
+    },
+    {
+      "code": "kawagoe",
+      "name": "川越・東松山・志木・和光"
+    },
+    {
+      "code": "tokorozawa",
+      "name": "所沢・狭山・飯能"
+    },
+    {
+      "code": "chichibu",
+      "name": "秩父・長瀞"
+    }
+  ],
+  "tiba": [
+    {
+      "code": "chiba",
+      "name": "千葉"
+    },
+    {
+      "code": "keiyo",
+      "name": "舞浜・浦安・船橋・幕張"
+    },
+    {
+      "code": "kashiwa",
+      "name": "松戸・柏"
+    },
+    {
+      "code": "narita",
+      "name": "成田空港・佐倉"
+    },
+    {
+      "code": "choshi",
+      "name": "銚子・旭・九十九里・東金・茂原"
+    },
+    {
+      "code": "sotobo",
+      "name": "鴨川・勝浦・御宿・養老渓谷"
+    },
+    {
+      "code": "tateyama",
+      "name": "南房総・館山・白浜・千倉"
+    },
+    {
+      "code": "uchibo",
+      "name": "市原・木更津・君津・富津・鋸南"
+    }
+  ],
+  "tokyo": [
+    {
+      "code": "tokyo",
+      "name": "東京２３区内"
+    },
+    {
+      "code": "nishi",
+      "name": "立川・八王子・町田・府中・吉祥寺"
+    },
+    {
+      "code": "okutama",
+      "name": "奥多摩・青梅・羽村"
+    },
+    {
+      "code": "ritou",
+      "name": "八丈島"
+    },
+    {
+      "code": "oshima",
+      "name": "大島"
+    },
+    {
+      "code": "kouzu",
+      "name": "神津島・新島・式根島"
+    },
+    {
+      "code": "miyake",
+      "name": "三宅島"
+    },
+    {
+      "code": "Ogasawara",
+      "name": "小笠原諸島"
+    }
+  ],
+  "kanagawa": [
+    {
+      "code": "yokohama",
+      "name": "横浜"
+    },
+    {
+      "code": "kawasaki",
+      "name": "川崎"
+    },
+    {
+      "code": "hakone",
+      "name": "箱根"
+    },
+    {
+      "code": "odawara",
+      "name": "小田原"
+    },
+    {
+      "code": "yugawara",
+      "name": "湯河原・真鶴"
+    },
+    {
+      "code": "sagamiko",
+      "name": "相模湖・丹沢"
+    },
+    {
+      "code": "sagamihara",
+      "name": "大和・相模原・町田西部"
+    },
+    {
+      "code": "ebina",
+      "name": "厚木・海老名・伊勢原"
+    },
+    {
+      "code": "shonan",
+      "name": "湘南・鎌倉・江ノ島・藤沢・平塚"
+    },
+    {
+      "code": "miura",
+      "name": "横須賀・三浦"
+    }
+  ],
+  "niigata": [
+    {
+      "code": "niigata",
+      "name": "新潟"
+    },
+    {
+      "code": "kaetsu",
+      "name": "月岡・瀬波・咲花"
+    },
+    {
+      "code": "kita",
+      "name": "長岡・燕三条・柏崎・弥彦・岩室・寺泊"
+    },
+    {
+      "code": "minami",
+      "name": "魚沼・十日町・津南・六日町・大湯"
+    },
+    {
+      "code": "yuzawa",
+      "name": "越後湯沢・苗場"
+    },
+    {
+      "code": "joetsu",
+      "name": "上越・糸魚川・妙高"
+    },
+    {
+      "code": "sado",
+      "name": "佐渡"
+    }
+  ],
+  "toyama": [
+    {
+      "code": "toyama",
+      "name": "富山・八尾・立山"
+    },
+    {
+      "code": "goto",
+      "name": "滑川・魚津・朝日・黒部・宇奈月"
+    },
+    {
+      "code": "gosei",
+      "name": "高岡・氷見・砺波"
+    }
+  ],
+  "ishikawa": [
+    {
+      "code": "kanazawa",
+      "name": "金沢"
+    },
+    {
+      "code": "kaga",
+      "name": "加賀・小松・辰口"
+    },
+    {
+      "code": "noto",
+      "name": "能登・輪島・珠洲"
+    },
+    {
+      "code": "nanao",
+      "name": "七尾・和倉・羽咋"
+    }
+  ],
+  "hukui": [
+    {
+      "code": "hukui",
+      "name": "福井"
+    },
+    {
+      "code": "awara",
+      "name": "あわら・三国"
+    },
+    {
+      "code": "katsuyama",
+      "name": "永平寺・勝山・大野"
+    },
+    {
+      "code": "echizen",
+      "name": "越前・鯖江・武生"
+    },
+    {
+      "code": "tsuruga",
+      "name": "敦賀・美浜"
+    },
+    {
+      "code": "obama",
+      "name": "若狭・小浜・高浜"
+    }
+  ],
+  "yamanasi": [
+    {
+      "code": "kofu",
+      "name": "甲府・湯村・昇仙峡"
+    },
+    {
+      "code": "yamanashi",
+      "name": "山梨・石和・勝沼・塩山"
+    },
+    {
+      "code": "otsuki",
+      "name": "大月・都留・道志渓谷"
+    },
+    {
+      "code": "yamanakako",
+      "name": "山中湖・忍野"
+    },
+    {
+      "code": "kawaguchiko",
+      "name": "河口湖・富士吉田・本栖湖・西湖・精進湖"
+    },
+    {
+      "code": "minobu",
+      "name": "下部・身延・早川"
+    },
+    {
+      "code": "nirasaki",
+      "name": "韮崎・南アルプス"
+    },
+    {
+      "code": "kiyosato",
+      "name": "八ヶ岳・小淵沢・清里・大泉"
+    }
+  ],
+  "nagano": [
+    {
+      "code": "nagano",
+      "name": "長野・小布施・信州高山・戸隠・飯綱"
+    },
+    {
+      "code": "madara",
+      "name": "斑尾・飯山・信濃町・野尻湖・黒姫"
+    },
+    {
+      "code": "nozawa",
+      "name": "野沢温泉・木島平・秋山郷"
+    },
+    {
+      "code": "shiga",
+      "name": "志賀高原･湯田中･渋"
+    },
+    {
+      "code": "ueda",
+      "name": "上田・別所・鹿教湯"
+    },
+    {
+      "code": "chikuma",
+      "name": "戸倉上山田・千曲"
+    },
+    {
+      "code": "sugadaira",
+      "name": "菅平・峰の原"
+    },
+    {
+      "code": "karui",
+      "name": "軽井沢・佐久･小諸"
+    },
+    {
+      "code": "yatsu",
+      "name": "八ヶ岳・野辺山・富士見・原村"
+    },
+    {
+      "code": "kirigamine",
+      "name": "蓼科・白樺湖・霧ヶ峰・車山"
+    },
+    {
+      "code": "suwa",
+      "name": "諏訪湖"
+    },
+    {
+      "code": "ina",
+      "name": "伊那・駒ヶ根・飯田・昼神"
+    },
+    {
+      "code": "kiso",
+      "name": "木曽"
+    },
+    {
+      "code": "matsumo",
+      "name": "松本・塩尻・浅間温泉・美ヶ原温泉"
+    },
+    {
+      "code": "kamiko",
+      "name": "上高地・乗鞍・白骨"
+    },
+    {
+      "code": "hotaka",
+      "name": "安曇野・穂高・大町・豊科"
+    },
+    {
+      "code": "hakuba",
+      "name": "白馬・八方尾根・栂池高原・小谷"
+    }
+  ],
+  "gihu": [
+    {
+      "code": "gifu",
+      "name": "岐阜・各務原"
+    },
+    {
+      "code": "kamitakara",
+      "name": "奥飛騨・新穂高"
+    },
+    {
+      "code": "takayama",
+      "name": "高山・飛騨"
+    },
+    {
+      "code": "gero",
+      "name": "下呂温泉・濁河温泉"
+    },
+    {
+      "code": "tajimi",
+      "name": "中津川・多治見・恵那・美濃加茂"
+    },
+    {
+      "code": "gujo",
+      "name": "郡上八幡・関・美濃"
+    },
+    {
+      "code": "shirakawago",
+      "name": "白川郷"
+    },
+    {
+      "code": "ogaki",
+      "name": "大垣・岐阜羽島"
+    }
+  ],
+  "shizuoka": [
+    {
+      "code": "shizuoka",
+      "name": "静岡・清水"
+    },
+    {
+      "code": "atami",
+      "name": "熱海"
+    },
+    {
+      "code": "ito",
+      "name": "伊東"
+    },
+    {
+      "code": "izukogen",
+      "name": "伊豆高原"
+    },
+    {
+      "code": "higashi",
+      "name": "東伊豆・河津"
+    },
+    {
+      "code": "shimoda",
+      "name": "下田・南伊豆"
+    },
+    {
+      "code": "nishi",
+      "name": "西伊豆・戸田・土肥・堂ヶ島"
+    },
+    {
+      "code": "naka",
+      "name": "伊豆長岡・修善寺・天城湯ヶ島"
+    },
+    {
+      "code": "fuji",
+      "name": "富士・富士宮"
+    },
+    {
+      "code": "numazu",
+      "name": "御殿場・沼津・三島"
+    },
+    {
+      "code": "yaizu",
+      "name": "焼津・藤枝・御前崎・寸又峡"
+    },
+    {
+      "code": "hamamatsu",
+      "name": "浜松・浜名湖・天竜"
+    },
+    {
+      "code": "kikugawa",
+      "name": "掛川・袋井・磐田"
+    }
+  ],
+  "aichi": [
+    {
+      "code": "nagoyashi",
+      "name": "名古屋"
+    },
+    {
+      "code": "mikawawan",
+      "name": "豊橋・豊川・蒲郡・伊良湖"
+    },
+    {
+      "code": "okumikawa",
+      "name": "奥三河・新城・湯谷温泉"
+    },
+    {
+      "code": "mikawa",
+      "name": "豊田・刈谷・知立・安城・岡崎"
+    },
+    {
+      "code": "owari",
+      "name": "一宮・犬山・小牧・瀬戸・春日井"
+    },
+    {
+      "code": "chita",
+      "name": "セントレア・東海・半田・知多"
+    },
+    {
+      "code": "minamichita",
+      "name": "南知多・日間賀島・篠島"
+    }
+  ],
+  "mie": [
+    {
+      "code": "tsu",
+      "name": "津･鈴鹿･亀山"
+    },
+    {
+      "code": "yunoyama",
+      "name": "四日市・桑名・湯の山・長島温泉"
+    },
+    {
+      "code": "iga",
+      "name": "伊賀・名張"
+    },
+    {
+      "code": "matsusaka",
+      "name": "松阪"
+    },
+    {
+      "code": "ise",
+      "name": "伊勢・二見"
+    },
+    {
+      "code": "toba",
+      "name": "鳥羽"
+    },
+    {
+      "code": "shima",
+      "name": "志摩・賢島"
+    },
+    {
+      "code": "kumano",
+      "name": "熊野・尾鷲・紀北"
+    }
+  ],
+  "shiga": [
+    {
+      "code": "ootsu",
+      "name": "大津・雄琴・草津・栗東"
+    },
+    {
+      "code": "kosei",
+      "name": "湖西・高島・マキノ"
+    },
+    {
+      "code": "kohoku",
+      "name": "長浜・米原"
+    },
+    {
+      "code": "kotou",
+      "name": "彦根・近江八幡・守山・東近江"
+    },
+    {
+      "code": "shigaraki",
+      "name": "信楽・甲賀"
+    }
+  ],
+  "kyoto": [
+    {
+      "code": "shi",
+      "name": "京都"
+    },
+    {
+      "code": "nannbu",
+      "name": "宇治・長岡京"
+    },
+    {
+      "code": "yunohana",
+      "name": "亀岡・湯の花・美山・京丹波"
+    },
+    {
+      "code": "fukuchiyama",
+      "name": "福知山・綾部"
+    },
+    {
+      "code": "hokubu",
+      "name": "丹後・久美浜"
+    },
+    {
+      "code": "miyazu",
+      "name": "天橋立・宮津・舞鶴"
+    }
+  ],
+  "osaka": [
+    {
+      "code": "shi",
+      "name": "大阪"
+    },
+    {
+      "code": "hokubu",
+      "name": "高槻・茨木・箕面・伊丹空港"
+    },
+    {
+      "code": "toubu",
+      "name": "枚方・守口・東大阪"
+    },
+    {
+      "code": "nantou",
+      "name": "八尾・藤井寺・河内長野"
+    },
+    {
+      "code": "nanbu",
+      "name": "堺・岸和田・関空・泉佐野"
+    }
+  ],
+  "hyogo": [
+    {
+      "code": "kobe",
+      "name": "神戸・有馬温泉・六甲山"
+    },
+    {
+      "code": "nantou",
+      "name": "宝塚・西宮・甲子園・三田・篠山"
+    },
+    {
+      "code": "minamichu",
+      "name": "明石・加古川・三木"
+    },
+    {
+      "code": "nannansei",
+      "name": "姫路・相生・赤穂"
+    },
+    {
+      "code": "chubu",
+      "name": "和田山・竹田城・ハチ高原"
+    },
+    {
+      "code": "kita",
+      "name": "城崎温泉・豊岡・出石・神鍋"
+    },
+    {
+      "code": "kasumi",
+      "name": "香住・浜坂・湯村"
+    },
+    {
+      "code": "awaji",
+      "name": "淡路島"
+    }
+  ],
+  "nara": [
+    {
+      "code": "nara",
+      "name": "奈良・大和高原"
+    },
+    {
+      "code": "hokubu",
+      "name": "橿原・大和郡山・天理・生駒"
+    },
+    {
+      "code": "nanbu",
+      "name": "吉野・十津川・天川・五條"
+    }
+  ],
+  "wakayama": [
+    {
+      "code": "wakayama",
+      "name": "和歌山・加太・和歌浦"
+    },
+    {
+      "code": "Kihoku",
+      "name": "高野山・橋本"
+    },
+    {
+      "code": "gobo",
+      "name": "御坊・有田・海南・日高"
+    },
+    {
+      "code": "shirahama",
+      "name": "南紀白浜・紀伊田辺・龍神"
+    },
+    {
+      "code": "Katsuura",
+      "name": "勝浦・串本・すさみ"
+    },
+    {
+      "code": "hongu",
+      "name": "熊野古道・新宮・本宮・中辺路"
+    }
+  ],
+  "tottori": [
+    {
+      "code": "tottori",
+      "name": "鳥取・岩美・浜村"
+    },
+    {
+      "code": "chubu",
+      "name": "倉吉・三朝温泉"
+    },
+    {
+      "code": "seibu",
+      "name": "米子・皆生温泉・大山"
+    }
+  ],
+  "simane": [
+    {
+      "code": "matsue",
+      "name": "松江・玉造・安来・奥出雲"
+    },
+    {
+      "code": "toubu",
+      "name": "出雲・大田・石見銀山"
+    },
+    {
+      "code": "masuda",
+      "name": "津和野・益田・浜田・江津"
+    },
+    {
+      "code": "ritou",
+      "name": "隠岐諸島"
+    }
+  ],
+  "okayama": [
+    {
+      "code": "okayama",
+      "name": "岡山"
+    },
+    {
+      "code": "bizen",
+      "name": "牛窓・瀬戸内・備前"
+    },
+    {
+      "code": "tsuyama",
+      "name": "津山・湯郷・美作・奥津"
+    },
+    {
+      "code": "niimi",
+      "name": "湯原・蒜山・新見・高梁"
+    },
+    {
+      "code": "kurashiki",
+      "name": "倉敷・総社・玉野・笠岡"
+    }
+  ],
+  "hiroshima": [
+    {
+      "code": "hiroshima",
+      "name": "広島"
+    },
+    {
+      "code": "higashihiroshima",
+      "name": "東広島・竹原・三原・広島空港"
+    },
+    {
+      "code": "fukuyama",
+      "name": "福山・尾道・しまなみ海道"
+    },
+    {
+      "code": "kure",
+      "name": "呉・江田島"
+    },
+    {
+      "code": "shohara",
+      "name": "三次・庄原・帝釈峡"
+    },
+    {
+      "code": "sandankyo",
+      "name": "三段峡・芸北・北広島"
+    },
+    {
+      "code": "miyajima",
+      "name": "宮島・宮浜温泉・廿日市"
+    }
+  ],
+  "yamaguchi": [
+    {
+      "code": "yamaguchi",
+      "name": "山口・湯田温泉・防府"
+    },
+    {
+      "code": "shimonoseki",
+      "name": "下関・宇部"
+    },
+    {
+      "code": "iwakuni",
+      "name": "岩国・周南・柳井"
+    },
+    {
+      "code": "hagi",
+      "name": "萩・長門・秋吉台"
+    }
+  ],
+  "tokushima": [
+    {
+      "code": "tokushima",
+      "name": "徳島・鳴門"
+    },
+    {
+      "code": "hokubu",
+      "name": "大歩危・祖谷・剣山・吉野川"
+    },
+    {
+      "code": "nanbu",
+      "name": "阿南・日和佐・宍喰"
+    }
+  ],
+  "kagawa": [
+    {
+      "code": "takamatsu",
+      "name": "高松・さぬき・東かがわ"
+    },
+    {
+      "code": "sakaide",
+      "name": "坂出・宇多津・丸亀"
+    },
+    {
+      "code": "kotohira",
+      "name": "琴平・観音寺"
+    },
+    {
+      "code": "ritou",
+      "name": "小豆島・直島"
+    }
+  ],
+  "ehime": [
+    {
+      "code": "chuuyo",
+      "name": "松山・道後"
+    },
+    {
+      "code": "touyo",
+      "name": "今治・しまなみ海道"
+    },
+    {
+      "code": "saijo",
+      "name": "西条・新居浜・四国中央"
+    },
+    {
+      "code": "nanyo",
+      "name": "宇和島・八幡浜"
+    }
+  ],
+  "kouchi": [
+    {
+      "code": "kouchi",
+      "name": "高知・南国・香南・伊野"
+    },
+    {
+      "code": "toubu",
+      "name": "安芸・室戸"
+    },
+    {
+      "code": "seibu",
+      "name": "足摺・四万十・宿毛・須崎"
+    }
+  ],
+  "hukuoka": [
+    {
+      "code": "fukuoka",
+      "name": "博多・キャナルシティ・海の中道・太宰府・二日市"
+    },
+    {
+      "code": "seibu",
+      "name": "天神・中洲・薬院・福岡ドーム・糸島"
+    },
+    {
+      "code": "kitakyusyu",
+      "name": "北九州"
+    },
+    {
+      "code": "chikuzen",
+      "name": "宗像・宮若・飯塚"
+    },
+    {
+      "code": "kurume",
+      "name": "久留米・甘木・原鶴温泉・筑後川温泉"
+    },
+    {
+      "code": "buzen",
+      "name": "北九州空港・苅田・行橋・豊前"
+    },
+    {
+      "code": "chikugo",
+      "name": "大牟田・柳川・八女・筑後"
+    }
+  ],
+  "saga": [
+    {
+      "code": "saga",
+      "name": "佐賀・古湯温泉"
+    },
+    {
+      "code": "tosu",
+      "name": "鳥栖"
+    },
+    {
+      "code": "ureshino",
+      "name": "嬉野・武雄・伊万里・有田・太良"
+    },
+    {
+      "code": "karatsu",
+      "name": "唐津・呼子"
+    }
+  ],
+  "nagasaki": [
+    {
+      "code": "nagasaki",
+      "name": "長崎"
+    },
+    {
+      "code": "unzen",
+      "name": "雲仙・島原・小浜"
+    },
+    {
+      "code": "airport",
+      "name": "諫早・大村・長崎空港"
+    },
+    {
+      "code": "sasebo",
+      "name": "ハウステンボス・佐世保・平戸"
+    },
+    {
+      "code": "ritou",
+      "name": "五島列島"
+    },
+    {
+      "code": "tsushima",
+      "name": "対馬"
+    },
+    {
+      "code": "iki",
+      "name": "壱岐島"
+    }
+  ],
+  "kumamoto": [
+    {
+      "code": "kumamoto",
+      "name": "熊本"
+    },
+    {
+      "code": "kikuchi",
+      "name": "大津・玉名・山鹿・荒尾・菊池"
+    },
+    {
+      "code": "aso",
+      "name": "阿蘇"
+    },
+    {
+      "code": "yatsushiro",
+      "name": "宇土・八代・水俣"
+    },
+    {
+      "code": "kuma",
+      "name": "人吉・球磨"
+    },
+    {
+      "code": "amakusa",
+      "name": "天草･本渡"
+    },
+    {
+      "code": "kurokawa",
+      "name": "黒川温泉・杖立"
+    }
+  ],
+  "ooita": [
+    {
+      "code": "oita",
+      "name": "大分"
+    },
+    {
+      "code": "beppu",
+      "name": "別府・日出"
+    },
+    {
+      "code": "usuki",
+      "name": "佐伯・臼杵・豊後大野"
+    },
+    {
+      "code": "yufuin",
+      "name": "湯布院・湯平"
+    },
+    {
+      "code": "taketa",
+      "name": "久住・竹田"
+    },
+    {
+      "code": "hita",
+      "name": "九重・日田・天瀬"
+    },
+    {
+      "code": "kunisaki",
+      "name": "国東・中津・宇佐・耶馬渓"
+    }
+  ],
+  "miyazaki": [
+    {
+      "code": "miyazaki",
+      "name": "宮崎"
+    },
+    {
+      "code": "hokubu",
+      "name": "高千穂・延岡・日向・高鍋"
+    },
+    {
+      "code": "nanbu",
+      "name": "都城・えびの・日南・綾"
+    }
+  ],
+  "kagoshima": [
+    {
+      "code": "kagoshima",
+      "name": "鹿児島・桜島"
+    },
+    {
+      "code": "oosumi",
+      "name": "霧島・国分・鹿児島空港"
+    },
+    {
+      "code": "kanoya",
+      "name": "鹿屋・垂水・志布志"
+    },
+    {
+      "code": "hokusatsu",
+      "name": "川内・出水"
+    },
+    {
+      "code": "nansatsu",
+      "name": "指宿・枕崎・南さつま"
+    },
+    {
+      "code": "yakushima",
+      "name": "屋久島"
+    },
+    {
+      "code": "ritou",
+      "name": "種子島"
+    },
+    {
+      "code": "amami",
+      "name": "奄美大島･喜界島・徳之島"
+    },
+    {
+      "code": "okinoerabu",
+      "name": "沖永良部島・与論島"
+    }
+  ],
+  "okinawa": [
+    {
+      "code": "nahashi",
+      "name": "那覇"
+    },
+    {
+      "code": "hokubu",
+      "name": "恩納・名護・本部・今帰仁"
+    },
+    {
+      "code": "chubu",
+      "name": "宜野湾・北谷・読谷・沖縄市・うるま"
+    },
+    {
+      "code": "nanbu",
+      "name": "糸満・豊見城・南城"
+    },
+    {
+      "code": "kerama",
+      "name": "慶良間・渡嘉敷・座間味・阿嘉"
+    },
+    {
+      "code": "kumejima",
+      "name": "久米島"
+    },
+    {
+      "code": "Miyako",
+      "name": "宮古島・伊良部島"
+    },
+    {
+      "code": "ritou",
+      "name": "石垣・西表・小浜島"
+    },
+    {
+      "code": "yonaguni",
+      "name": "与那国島"
+    },
+    {
+      "code": "daito",
+      "name": "大東島"
+    }
+  ]
+}
