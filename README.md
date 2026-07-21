@@ -45,8 +45,9 @@ cp .env.example .env.local
 
 ## 実装メモ
 
-- 楽天トラベル空室検索API（`VacantHotelSearch`）は1回の呼び出しにつき1泊分の検索結果を返す仕様のため、期間中の日毎料金を取得するには宿泊日ごとに逐次呼び出し、`lib/hotels/providers/rakutenProvider.js` 内でホテル・部屋タイプ単位にマージしています（APIのレート制限を考慮し、呼び出し間に約1秒のウェイトを入れています）。
+- 楽天トラベル空室検索API（`VacantHotelSearch`）は1回の呼び出しにつき1泊分の検索結果を返す仕様のため、期間中の日毎料金を取得するには宿泊日ごとに逐次呼び出し、`lib/hotels/providers/rakutenProvider.js` 内でホテル・部屋タイプ単位にマージしています（楽天APIのレート制限を考慮し、呼び出し間に1.5秒のウェイトを入れています）。
 - 検索は最大14泊まで、大人人数は1〜10人まで対応しています（`app/api/hotels/search/route.js`）。
+- 地域指定は`largeClassCode`/`middleClassCode`(都道府県単位)ではなく、`lib/hotels/regionCoordinates.js`にある**代表都市の緯度経度+検索半径3.0km(API上限)**で行っています。都道府県単位のクラスコードのみでは「valid classcodes」エラーになったための対応で、県庁所在地など中心部から離れたホテルは検索結果に含まれません。より正確にする場合は、楽天の地区コードAPI(GetAreaClass)で市区町村単位(smallClassCode)を取得し、2段階の地域選択UIに変更してください。
 - 楽天APIのレスポンス構造は実際のキーで一度動作確認し、必要に応じて `rakutenProvider.js` のパース処理を調整してください。
 
 ## ディレクトリ構成
@@ -57,7 +58,8 @@ app/
   components/                 SearchForm / HotelResults / DailyRateTable
   api/hotels/search/route.js  検索APIエンドポイント
 lib/hotels/
-  regions.js                  都道府県一覧(楽天middleClassCode準拠)
+  regions.js                  都道府県一覧(UI表示用)
+  regionCoordinates.js         都道府県の代表都市の緯度経度
   dateUtils.js                日付ユーティリティ
   cache.js                    Supabaseキャッシュ読み書き
   providers/mockProvider.js   モックデータ生成
