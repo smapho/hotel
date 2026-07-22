@@ -46,6 +46,7 @@ cp .env.example .env.local
 ## 実装メモ
 
 - 楽天トラベル空室検索API（`VacantHotelSearch`）は1回の呼び出しにつき1泊分の検索結果を返す仕様のため、期間中の日毎料金を取得するには宿泊日ごとに逐次呼び出し、`lib/hotels/providers/rakutenProvider.js` 内でホテル・部屋タイプ単位にマージしています（楽天APIのレート制限を考慮し、呼び出し間に1.5秒のウェイトを入れています）。
+- 検索結果一覧は`searchPattern=0`(施設ごと・1ホテル1室)で取得しています。`searchPattern=1`(プランごと)を使うと、プラン数の多いカプセルホテル等が上位30件枠を占有してしまい、価格帯が偏る(高級〜標準ホテルが1件も出てこない)ことが実データで確認されたためです。そのかわり一覧では1ホテルにつき1室分の料金しか出ないので、ホテルカードの「他の部屋タイプも見る」ボタンから`/api/hotels/rooms`(`hotelNo`指定+`searchPattern=1`)を呼び、そのホテル単体の全プランをオンデマンド取得しています(`hotelNo`単体検索は他ホテルと30件枠を取り合わないため、プラン数に関わらず正しく全件返ります)。
 - 検索は最大14泊まで、大人人数は1〜10人まで対応しています（`app/api/hotels/search/route.js`）。
 - 地域は「都道府県」+任意の「市区町村」の2段階選択です。市区町村を選ぶと`largeClassCode`/`middleClassCode`/`smallClassCode`のクラスコード検索、指定しない場合は`lib/hotels/regionCoordinates.js`の代表都市の緯度経度+検索半径3.0km(API上限)にフォールバックします（都道府県コードだけでは「valid classcodes」エラーになるため）。
 - 都道府県・市区町村のコード一覧(`lib/hotels/regions.js` / `lib/hotels/cities.generated.json`)は、楽天の地区コードAPI(GetAreaClass)のレスポンスから `node scripts/generateAreaData.mjs` で生成しています。楽天側にコード追加・変更があった場合は、`node scripts/fetchAreaClasses.mjs`(要`.env.local`の`RAKUTEN_APP_ID`/`RAKUTEN_ACCESS_KEY`)→`node scripts/generateAreaData.mjs`の順で再生成してください。

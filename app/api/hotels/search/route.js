@@ -1,10 +1,7 @@
 import { NextResponse } from "next/server";
 import { searchHotels } from "@/lib/hotels";
 import { getCitiesForRegion, getDetailAreasForCity } from "@/lib/hotels/cities";
-
-function isValidDate(str) {
-  return /^\d{4}-\d{2}-\d{2}$/.test(str) && !Number.isNaN(new Date(`${str}T00:00:00`).getTime());
-}
+import { validateDatesAndGuests } from "@/lib/hotels/searchValidation";
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
@@ -25,22 +22,10 @@ export async function GET(request) {
   if (detailCode && !getDetailAreasForCity(regionCode, cityCode).some((d) => d.code === detailCode)) {
     return NextResponse.json({ error: "detail の値が region/city と一致していません" }, { status: 400 });
   }
-  if (!isValidDate(checkinDate) || !isValidDate(checkoutDate)) {
-    return NextResponse.json({ error: "checkinDate / checkoutDate は YYYY-MM-DD 形式で指定してください" }, { status: 400 });
-  }
-  if (checkinDate >= checkoutDate) {
-    return NextResponse.json({ error: "checkoutDate は checkinDate より後の日付にしてください" }, { status: 400 });
-  }
-  const maxNights = 14;
-  const nightsCount = (new Date(checkoutDate) - new Date(checkinDate)) / 86400000;
-  if (nightsCount > maxNights) {
-    return NextResponse.json({ error: `一度に検索できるのは最大${maxNights}泊までです` }, { status: 400 });
-  }
-  if (!Number.isInteger(adultNum) || adultNum < 1 || adultNum > 10) {
-    return NextResponse.json({ error: "adultNum は1〜10の整数で指定してください" }, { status: 400 });
-  }
-  if (!Number.isInteger(roomNum) || roomNum < 1 || roomNum > 9) {
-    return NextResponse.json({ error: "roomNum は1〜9の整数で指定してください" }, { status: 400 });
+
+  const validationError = validateDatesAndGuests({ checkinDate, checkoutDate, adultNum, roomNum });
+  if (validationError) {
+    return NextResponse.json({ error: validationError }, { status: 400 });
   }
 
   try {
