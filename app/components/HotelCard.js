@@ -46,6 +46,7 @@ export default function HotelCard({ hotel, nights, checkinDate, checkoutDate, ad
     <div className="rounded-xl border border-black/10 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-black/20">
       <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
         <h3 className="text-lg font-semibold">
+          <span className="mr-2 font-mono text-sm font-normal text-black/40 dark:text-white/40">[{hotel.hotelNo}]</span>
           {hotel.hotelInformationUrl ? (
             <a href={hotel.hotelInformationUrl} target="_blank" rel="noreferrer" className="hover:underline">
               {hotel.hotelName}
